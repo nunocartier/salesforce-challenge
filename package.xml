@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>*</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ApexPage</name>
+    </types>
+    <types>
+        <members>Translated_text</members>
+        <name>ApexTrigger</name>
+    </types>
+    <types>
+        <members>Nuno_Unbabel_Challenge</members>
+        <name>CustomApplication</name>
+    </types>
+    <types>
+        <members>Translation__c.From_Language__c</members>
+        <members>Translation__c.List_of_languages__c</members>
+        <members>Translation__c.Original_Text__c</members>
+        <members>Translation__c.Status__c</members>
+        <members>Translation__c.To_Language__c</members>
+        <members>Translation__c.Translated_Text__c</members>
+        <name>CustomField</name>
+    </types>
+    <version>45.0</version>
+</Package>

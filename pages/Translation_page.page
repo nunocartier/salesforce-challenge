@@ -1,0 +1,31 @@
+<apex:page controller="Controller">
+    <apex:pageMessages />
+    <apex:form >
+        <apex:pageBlock title="Translation Page" mode="edit">
+            <apex:pageBlockSection title="Type what you want to translate and submit for an answear" columns="1">
+                <apex:inputField value="{!translation.Original_Text__c}" label="Text to be translated:" required=""/>
+                <apex:selectList value="{!selectedLanguageInput}" label="Language to be translated from:" multiselect="false" size="1"> 
+                    <apex:selectOptions value="{!languagesList}"/>  
+                </apex:selectList> 
+                <apex:selectList value="{!selectedLanguageOutput}" label="Result language:" multiselect="false" size="1"> 
+                    <apex:selectOptions value="{!languagesList}"/>  
+                </apex:selectList>           
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!submit}" value="Submit"/>
+                <apex:actionSupport event="onclick" reRender="table" action="{!submit}"/>          
+                <apex:commandButton action="{!deleteDB}" value="DeleteDB"/>
+                <apex:actionSupport event="onclick" reRender="table" action="{!deleteDB}"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+        <apex:pageBlock title="Record of Translations" mode="edit" id="table">
+            <apex:pageBlockTable value="{!translations}" var="trans">
+                <apex:column value="{!trans.From_Language__c}"/>                
+                <apex:column value="{!trans.Original_Text__c}"/>
+                <apex:column value="{!trans.To_Language__c}"/>
+                <apex:column value="{!trans.Translated_Text__c}"/>
+                <apex:column value="{!trans.Status__c}"/>
+                </apex:pageBlockTable>
+        </apex:pageBlock>       
+    </apex:form>
+</apex:page>

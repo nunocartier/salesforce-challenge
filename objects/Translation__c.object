@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>From_Language__c</fullName>
+        <externalId>false</externalId>
+        <label>From Language</label>
+        <length>50</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>List_of_languages__c</fullName>
+        <externalId>false</externalId>
+        <label>List of languages</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>unbabelapi__Languages</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Original_Text__c</fullName>
+        <description>Input text from user to be translated from the language selected, to the output language selected</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Write the text in this box that you want to translate</inlineHelpText>
+        <label>Text to be translated</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>To_Language__c</fullName>
+        <externalId>false</externalId>
+        <label>To Language</label>
+        <length>50</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Translated_Text__c</fullName>
+        <externalId>false</externalId>
+        <label>Translated Text</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+</CustomObject>
